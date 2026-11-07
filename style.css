@@ -1,0 +1,174 @@
+/* 1. Reset default browser spacing so the banner touches the very edges */
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #852a2a 20%, #4a1515 100%);
+    background-attachment: fixed;
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    
+    /* INCREASE THIS NUMBER to push the vegan text lower down the screen */
+    padding-top: 180px; 
+}
+
+.top-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    /* 1. FLEX ENGINE: Set layout to flex */
+    display: flex;
+    
+    /* 2. FORCE INTO THE CENTER: This pulls the shields out of the far corners */
+    justify-content: center; 
+    align-items: center;
+    
+    /* 3. SET THE EXACT DISTANCE: Controls how close the shields sit to the text */
+    gap: 30px; 
+    
+    /* Your existing design rules */
+    background: linear-gradient(to bottom, #111111 60%, #300f0f 100%);
+    padding: 25px 0; /* Changed padding to 0 on the sides to prevent forcing edge spacing */
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.7); 
+    z-index: 100; 
+}
+.banner-crest {
+    height: 80px;  
+    width: auto;   
+    
+    /* REMOVE ALL OLD TRICKS */
+    background: none;
+    filter: none;
+    mix-blend-mode: normal;
+    clip-path: none;
+}
+
+/* 3. Keep the text elements stacked neatly in the center column */
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px; /* Adds clean breathing room between the text and the icon */
+}
+
+.banner-title {
+    margin: 0; 
+}
+.banner-subtitle {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.content-area {
+    text-align: center;
+    
+    /* MOVE EVERYTHING DOWN TOGETHER */
+    transform: translateY(120px); 
+    
+    /* Adds safety breathing room at the bottom so you can scroll comfortably */
+    padding-bottom: 150px; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.small-text {
+    font-size: 0.7rem;
+}
+/* --- SKYRIM STYLE (Medieval / Fantasy) --- */
+.skyrim-theme {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    color: #d4c595; /* Metallic gold text color */
+    
+    /* CHANGED COLOR TO A DEEP FANTASY RED */
+    text-shadow: 2px 2px 5px #ff0000; 
+}
+
+/* --- BIRTHDAY STYLE (Fun & Bubbly) --- */
+.birthday-bubbly {
+    font-family: 'Happy Monkey', system-ui;
+    color: #ff4081; /* Festive pink */
+}
+
+/* --- BIRTHDAY STYLE (Elegant Invitation Script) --- */
+.birthday-elegant {
+    font-family: 'Great Vibes', cursive;
+    color: #e1ff00;
+}
+/* 1. THE MAIN CONTAINER: Clear out the blur filter entirely so the salmon stays sharp */
+.food-image-container {
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    border-radius: 25px;
+    overflow: hidden;
+    
+    /* 2. REMOVED BLUR FROM HERE */
+    filter: none; 
+
+    /* 3. SOFTEN THE BOUNDARIES: An ambient outer shadow that matches the background color */
+    box-shadow: 0px 0px 35px 20px #531919; 
+}
+
+/* 4. THE INSET VIGNETTE OVERLAY: Keeps the internal shadow layer intact */
+.food-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 25px 15px #531919; /* Matched to a warm, rustic dark background tone */
+    pointer-events: none;
+}
+
+/* 5. THE IMAGE: Stays crisp, clear, and perfectly detailed */
+.food-image {
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    opacity: 0.95; /* Restored slightly higher opacity for crisp details */
+}
+.home-icon-link {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out; /* Smooth hover transition animation */
+}
+
+/* 3. Style and size the actual icon graphic */
+.home-icon {
+    height: 35px;  /* Keeps the icon looking balanced and elegant, not overwhelming */
+    width: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5)); /* Subtle depth shadow */
+}
+
+/* 4. Optional: Gives a cool interactive hover effect when moving over the icon */
+.home-icon-link:hover {
+    transform: scale(1.1); /* Softly swells by 10% when hovered over to signal it's clickable */
+}
